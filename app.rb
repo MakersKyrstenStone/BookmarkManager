@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/bookmark.rb'
 
 class BookmarkManager < Sinatra::Base
   configure :development do
@@ -10,12 +11,8 @@ class BookmarkManager < Sinatra::Base
     'Bookmark Manager'
   end
   get '/bookmarks' do
-    bookmark_list = [
-    "http://www.makersacademy.com",
-    "http://www.destroyallsoftware.com",
-    "http://www.google.com"
-    ]
-    bookmark_list.join
+    @bookmarks_list = Bookmarks.all
+   erb :'index'
   end
   
   run! if app_file == $0
