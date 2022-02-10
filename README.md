@@ -6,8 +6,14 @@ initial setup as advised in project
 when visited the bookmarks file will display all available bookmarks to the user using html script 
 it will also allow user to add or remove bookmarks and store in a file so that the most recent version can be recalled.
 
-HOW TO use me
+HOW TO use me (bookmarkmanager - production)
 Connect to psql
 Create the database using the psql command CREATE DATABASE bookmarkmanager;
 Connect to the database using the pqsl command \c bookmarkmanager;
 Run the query we have saved in the file 01_create_bookmarks_table.sql
+
+HOW TO use me (bookmark_manager_test - test env)
+Connect to psql
+Create the database using the psql command CREATE DATABASE bookmark_manager_test;
+Connect to the database using the pqsl command \c bookmark_manager_test;
+Run the query we have saved in the file 01_create_bookmarks_table.sql this will set up a table for you
